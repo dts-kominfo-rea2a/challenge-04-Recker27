@@ -12,14 +12,14 @@ const createDate = (arrayDates, index) => {
   const result = [];
   if (index !== undefined) {
     for (let counter = 0; counter < arrayDates.length; counter++) {
-      result.push(Date.parse(arrayDates[counter]));
+      result.push((Date.parse(arrayDates[counter]) / 1000).toString());
     }
-    return (result[index] / 1000).toString();
+    return result.sort()[index];
   } else {
     for (let counter = 0; counter < arrayDates.length; counter++) {
       result.push((Date.parse(arrayDates[counter]) / 1000).toString());
     }
-    return result.join("-");
+    return result.sort().join("-");
   }
 };
 
