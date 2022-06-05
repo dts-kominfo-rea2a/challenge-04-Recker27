@@ -14,7 +14,7 @@ const createDate = (arrayDates, index) => {
     for (let counter = 0; counter < arrayDates.length; counter++) {
       result.push((Date.parse(arrayDates[counter]) / 1000).toString());
     }
-    return result.sort()[index];
+    return result[index];
   } else {
     for (let counter = 0; counter < arrayDates.length; counter++) {
       result.push((Date.parse(arrayDates[counter]) / 1000).toString());
